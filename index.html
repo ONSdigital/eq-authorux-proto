@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Author</title>
+	<meta charset="utf-8">
+	<meta name="description"">
+	<meta name="author" content="Dan Jukes">
+	<meta http-equiv="cleartype" content="on">
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="Dan Jukes">
+		
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="/assets/images/png/favicon-32.png">
+	<link rel="icon" href="/assets/images/png/favicon-32.png" sizes="32x32">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="assets/css/material.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<style>
+html {
+	background: #F5F5F5;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	color: #4A4A4A;
+}
+
+i:hover {
+	cursor: default;
+}
+
+.sub-heading {
+	font-size: 9px;
+	text-transform: uppercase;
+	font-weight: 900;
+	line-height: 24px;
+	margin: 0;
+}
+
+.mdl-layout__header {
+	background: #35414D;
+}
+
+.mdl-layout__header-row {
+	padding-left: 24px;
+}
+
+.mdl-layout__title, .mdl-layout-title {
+	margin-left: 136px;
+	font-size: 16px;
+	line-height: 64px;
+	position: relative;;
+}
+
+.mdl-layout-title .material-icons {
+    top: 7px;
+    position: relative;
+}
+
+.header-item {
+	margin-left: 16px;
+}
+
+.status {
+	width: 140px;
+	text-align: left;
+}
+
+.container {
+	width: 100%;
+}
+
+.mdl-grid {
+	padding: 0;
+}
+
+.mdl-tabs__tab-bar {
+	background: #FFFFFF;
+	padding-left: 216px;
+	display: block;
+}
+
+.mdl-tabs__tab {
+	text-transform: none;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+	background: rgb(5,108,153);
+}
+
+.mdl-tabs__tab.is-active {
+	color: rgb(5,108,153) !important;
+}
+
+.mdl-card {
+	overflow: inherit;
+}
+
+.questionnaire-section {
+
+}
+
+.questionnaire-section h3{
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 40px;
+	margin: 0;
+	padding: 0;
+	background: url(assets/images/svg/ic_section.svg) no-repeat left center;
+	padding-left: 24px; 
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: calc(180px - 16px);
+}
+
+.questionnaire-section ul {
+	margin: 0;
+	padding: 0;
+}
+
+.questionnaire-section li {
+	list-style: none;
+	line-height: 40px;
+	font-size: 13px;
+	padding: 0 16px 0 24px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: calc(180px - 16px);
+}
+
+.questionnaire-section li.active {
+	background: #EAEAEA;
+}
+
+.add-section {
+	border-top: 1px solid rgba(0,0,0,0.16);
+	border-bottom: 1px solid rgba(0,0,0,0.16);
+	line-height: 58px;
+	margin-top: 4px;
+}
+
+section {
+	padding: 0 42px;
+	border: 2px solid transparent;
+	border-top: 2px dashed rgba(0,0,0,0.16);
+	margin-top: -2px;
+}
+
+.section {
+	position: relative;
+}
+
+section:nth-child(1) {
+	border-top: transparent;
+	margin-top: 0;
+}
+
+.section-active,
+section:hover {
+	border: 2px solid #1CA8F4 !important;
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  color: rgba(74,74,74, 0.54);
+  display: block; /* For Firefox */
+  position: relative;
+}
+
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+.editable-area {
+	position: relative;
+}
+
+.format-bar {
+	position: absolute;
+	top: -64px;
+	height: 56px;
+	width: calc(254px - 16px);
+	padding: 0 8px;
+	background: #FFFFFF;
+	border-radius: 2px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16);
+	display:none;
+	border: 1px solid rgba(0,0,0,0.08);
+}
+
+.format-bar.show {
+	display: block;
+}
+
+.format-bar i {
+	width: 56px;
+	height: 56px;
+	display: inline-block;
+	line-height: 56px;
+	text-align: center;
+}
+
+.format-bar i img {
+	margin-top: -24px;
+}
+
+.section h2 {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	margin-top: 36px;
+	margin-bottom: 8px;
+}
+
+.section p {
+	line-height: 24px;
+}
+
+.section h1 {
+	font-size: 28px;
+	line-height: 36px;
+	font-weight: bold;
+}
+
+.comment {
+	position: absolute;
+	right: -32px;
+	top: calc(50% - 16px);
+	display: none;
+}
+
+.comment i {
+	opacity: 0.64;
+}
+
+.comment i:hover {
+	opacity: 0.87;
+}
+.section-active .comment {
+	display: block;
+}
+
+.right-panel {
+	height: calc(100% - 113px);
+	width: 100%;
+    background: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.137255) 0px 4px 5px 0px, rgba(0, 0, 0, 0.117647) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+}
+
+section .optional {
+	display: none;
+}
+
+section.section-active .optional {
+	display: block;
+}
+
+.format-bar i:hover {
+	opacity: 0.87;
+}
+
+.format-bar i {
+	opacity: 0.64;
+	color: rgba(0,0,0,1);
+	fill: rgba(0,0,0,1);
+}
+
+.format-bar i.md-inactive, .format-bar i:hover.md-inactive {
+	opacity: 0.16;
+}
+
+.add-answer {
+	display: block;
+	line-height: 64px;
+	vertical-align: middle;
+	font-size: 13px;
+	position: relative;
+}
+
+.add-answer i {
+	position: relative;
+	top: 8px;
+}
+
+
+</style>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <div class="logo"><img src="assets/images/svg/dahl-logo.svg"></div>
+      <span class="mdl-layout-title">Home <i class="material-icons">keyboard_arrow_right</i> Questionnaire name</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+      	<div id="tt1" class="icon material-icons header-item">undo</div>
+		<div class="mdl-tooltip" data-mdl-for="tt1">Undo</div>
+		<div id="tt2" class="icon material-icons header-item"">redo</div>
+		<div class="mdl-tooltip" data-mdl-for="tt2">redo</div>
+
+		<div class="status header-item"">All changes saved.</div>
+
+      	<div id="tt3" class="icon material-icons header-item"">visibility</div>
+		<div class="mdl-tooltip" data-mdl-for="tt3">Preview</div>
+        <div id="tt4" class="icon material-icons header-item"">file_download</div>
+		<div class="mdl-tooltip" data-mdl-for="tt4">Export</div>
+      </nav>
+    </div>
+  </header>
+	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+		<div class="mdl-tabs__tab-bar">
+	      <a href="#meta-panel" class="mdl-tabs__tab">Questionnaire meta</a>
+	      <a href="#builder-panel" class="mdl-tabs__tab is-active">Builder</a>
+	      <a href="#routing-panel" class="mdl-tabs__tab">Routing</a>
+      	</div>
+      	<div class="container">
+
+			<div class="mdl-tabs__panel" id="meta-panel">
+				<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--3-col"></div>
+				  <div class="mdl-cell mdl-cell--6-col">
+				  	<div class="mdl-card mdl-shadow--2dp" style="height: 500px; width: 100%; margin-top: 24px;">
+				  		Meta page
+
+				  	</div>
+
+				  </div>
+				  <div class="mdl-cell mdl-cell--3-col"></div>
+				 </div>
+			</div>
+
+
+
+			<div class="mdl-tabs__panel is-active" id="builder-panel">
+				<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--2-col">
+				  	<h4 class="sub-heading">Questionnaire structure</h4>
+				  	<div class="questionnaire-section">
+				  		<h3>Section title</h3>
+					  	<ul>
+					  		<li class="active">Page title</li>
+					  		<li>+ add page</li>
+					  	</ul>
+				  	</div>
+				  	<div class="add-section">
+				  		+ Create new section 
+				  	</div>
+
+				  </div>
+				  <div class="mdl-cell mdl-cell--1-col"></div>
+				  <div class="mdl-cell mdl-cell--6-col">
+				  	<div class="mdl-card mdl-shadow--2dp" style="height: 500px; width: 100%; margin-top: 24px;">
+				  		<section class="section section-active">
+
+				  			<div class="editable-area">
+				  				<div class="format-bar show">
+				  					<i id="tt-heading" class="material-icons md-inactive"><img src="assets/images/svg/ic_heading.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-heading">Heading</div>
+				  					<i id="tt-bold" class="material-icons md-inactive">format_bold</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-bold">Bold</div>
+				  					<i id="tt-emphasis" class="material-icons"><img src="assets/images/svg/ic_emphasis.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-emphasis">Emphasis</div>
+				  					<i id="tt-list" class="material-icons md-inactive">list</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-list">List</div>
+				  				</div>
+				  				<h2 contenteditable="true" id="section-title" placeholder="Section title"></h2>
+				  			</div>
+
+				  			<div class="editable-area">
+				  				<div class="format-bar">
+				  					<i id="tt-heading" class="material-icons md-inactive"><img src="assets/images/svg/ic_heading.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-heading">Heading</div>
+				  					<i id="tt-bold" class="material-icons">format_bold</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-bold">Bold</div>
+				  					<i id="tt-emphasis" class="material-icons"><img src="assets/images/svg/ic_emphasis.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-emphasis">Emphasis</div>
+				  					<i id="tt-list" class="material-icons md-inactive">list</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-list">List</div>
+				  				</div>
+				  			<p contenteditable="true" id="section-description" class="optional" placeholder="Section description (optional)..."></p>
+				  			</div>
+
+				  			<div class="comment">
+				  				<i id="tt-comment1" class="material-icons">insert_comment</i>
+				  				<div class="mdl-tooltip" data-mdl-for="tt-comment1">Comment</div>
+
+				  			</div>
+				  		</section>
+
+				  		<section class="section question">
+				  			<div class="editable-area">
+				  				<div class="format-bar">
+				  					<i id="tt-heading" class="material-icons md-inactive"><img src="assets/images/svg/ic_heading.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-heading">Heading</div>
+				  					<i id="tt-bold" class="material-icons md-inactive">format_bold</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-bold">Bold</div>
+				  					<i id="tt-emphasis" class="material-icons"><img src="assets/images/svg/ic_emphasis.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-emphasis">Emphasis</div>
+				  					<i id="tt-list" class="material-icons md-inactive">list</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-list">List</div>
+				  				</div>
+				  			<h1 contenteditable="true" id="question-title" placeholder="Question title"></h1>
+				  		</div>
+
+				  		<div class="editable-area">
+				  				<div class="format-bar">
+				  					<i id="tt-heading" class="material-icons md-inactive"><img src="assets/images/svg/ic_heading.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-heading">Heading</div>
+				  					<i id="tt-bold" class="material-icons">format_bold</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-bold">Bold</div>
+				  					<i id="tt-emphasis" class="material-icons"><img src="assets/images/svg/ic_emphasis.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-emphasis">Emphasis</div>
+				  					<i id="tt-list" class="material-icons md-inactive">list</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-list">List</div>
+				  				</div>
+				  			<p contenteditable="true" id="question-description" class="optional" placeholder="Question description (optional)..."></p>
+				  		</div>
+
+				  		<div class="editable-area">
+				  				<div class="format-bar">
+				  					<i id="tt-heading" class="material-icons"><img src="assets/images/svg/ic_heading.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-heading">Heading</div>
+				  					<i id="tt-bold" class="material-icons">format_bold</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-bold">Bold</div>
+				  					<i id="tt-emphasis" class="material-icons"><img src="assets/images/svg/ic_emphasis.svg"></i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-emphasis">Emphasis</div>
+				  					<i id="tt-list" class="material-icons">list</i>
+				  					<div class="mdl-tooltip" data-mdl-for="tt-list">List</div>
+				  				</div>
+				  			<p contenteditable="true" id="guidance-content" class="optional" placeholder="Guidance text (optional)..."></p>
+				  		</div>
+				  			<div class="comment">
+				  				<i class="material-icons">insert_comment</i>
+				  			</div>
+				  		</section>
+
+				  		<section class="section answer">
+				  			<span class="add-answer"><i class="material-icons">add_circle_outline</i> add answer</span>
+				  			<div class="comment">
+				  				<i class="material-icons">insert_comment</i>
+				  			</div>
+				  		</section>
+
+				  	</div>
+
+				  </div>
+				  <div class="mdl-cell mdl-cell--1-col"></div>
+				  <div class="mdl-cell mdl-cell--2-col" style="margin-top: 0;">
+				  	<div class="right-panel"></div>
+				  	
+				  </div>
+				 </div>
+			</div>
+
+			<div class="mdl-tabs__panel" id="routing-panel">
+				<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--3-col"></div>
+				  <div class="mdl-cell mdl-cell--6-col">
+				  	<div class="mdl-card mdl-shadow--2dp" style="height: 500px; width: 100%; margin-top: 24px;">
+				  		Routing panel
+
+				  	</div>
+
+				  </div>
+				  <div class="mdl-cell mdl-cell--3-col"></div>
+				 </div>				
+			</div>
+
+		</div>
+	</div>
+
+ </div>
+
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById("section-title").focus();
+    };
+</script>
+
+<script>
+	
+$(document).ready(function() {
+
+	$('.mdl-cell--1-col').on('click', function(e){
+		
+		//if ($(this).not("section")) {
+			$('section').removeClass('section-active');
+			$('.format-bar').removeClass('show');
+		//}
+
+		/*if ($(this).is("section")) {
+			$('section').removeClass('section-active');
+  			$(this).addClass('section-active');
+		}*/
+
+  
+	});
+
+
+  $('section').on('click', function(){
+  	$('section').removeClass('section-active');
+  	$(this).addClass('section-active');
+  	e.stopPropagation();
+  });
+
+  $(document).keydown(function () {
+  	$('.status').text('Saving changes...');
+  	setTimeout(explode, 1000);
+  });
+
+function explode(){
+  $('.status').text('All changes saved.');
+}
+
+  //$(document).keyup(function () {
+  //	$('.status').text('All changes saved.')
+  //});
+
+  $('#section-title').keyup(function () {
+  	if ($(this).text().length > 0) { 
+    	$('.questionnaire-section h3').text($(this).text()); 
+	} else {
+		$('.questionnaire-section h3').text('Section title');
+	}
+  });
+
+  $('.optional[contenteditable=true]').keyup(function () {
+  	if ($(this).text().length > 0) {
+  		$(this).removeClass('optional');
+  	} else {
+  		$(this).addClass('optional');
+  	}
+  });
+
+  $('[contenteditable=true]').on('click', function(){
+  	$('.format-bar').removeClass('show');
+  	$(this).parent().children('.format-bar').addClass('show');
+  });
+
+ // if p.optional.length > 0 remove optional
+
+    $('#question-title').keyup(function () {
+  	if ($(this).text().length > 0) { 
+    	$('li.active').text($(this).text()); 
+	} else {
+		$('li.active').text('Page title');
+	}
+  });
+
+  $('.add-answer').on('click', function(){
+  	alert('add an answer to this parent');
+  });
+})
+</script>
+
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="65px" viewBox="0 0 56 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(0.000000, 0.500000)">
+            <text id="Dahl" font-family="Lato-Semibold, Lato" font-size="16" font-weight="500" letter-spacing="-0.140000001" fill="#FFFFFF">
+                <tspan x="23.348" y="37.5">Dahl</tspan>
+            </text>
+            <g id="Group-2" opacity="0.532416045" transform="translate(0.000000, 25.584615)" fill="#FEFFFF">
+                <path d="M8.07616546,0.080777814 L18.6913768,0.080777814 L18.6913768,2.94708564 L8.07616546,2.94708564 L8.07616546,0.080777814 Z M2.17645481,0.080777814 L5.53183771,0.080777814 L5.53183771,2.94708564 L2.17645481,2.94708564 L2.17645481,0.080777814 Z M8.07616546,9.4515514 L18.6913768,9.4515514 L18.6913768,12.3178592 L8.07616546,12.3178592 L8.07616546,9.4515514 Z M2.17645481,9.4515514 L5.53183771,9.4515514 L5.53183771,12.3178592 L2.17645481,12.3178592 L2.17645481,9.4515514 Z M0.0734467921,4.76616461 L10.6886581,4.76616461 L10.6886581,7.63247243 L0.0734467921,7.63247243 L0.0734467921,4.76616461 Z M13.2969362,4.76616461 L16.6523191,4.76616461 L16.6523191,7.63247243 L13.2969362,7.63247243 L13.2969362,4.76616461 Z" id="Combined-Shape"></path>
+            </g>
+            <rect id="Rectangle" x="0" y="0.492307692" width="56" height="63.0153846"></rect>
+        </g>
+    </g>
+</svg>
