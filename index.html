@@ -147,6 +147,12 @@ i:hover {
 	border-bottom: 1px solid rgba(0,0,0,0.16);
 	line-height: 58px;
 	margin-top: 4px;
+	position: relative;
+}
+
+.add-section i {
+	position: relative;
+	top: 7px;
 }
 
 section {
@@ -162,7 +168,6 @@ section {
 
 section:nth-child(1) {
 	border-top: transparent;
-	margin-top: 0;
 }
 
 .section-active,
@@ -236,12 +241,13 @@ section:hover {
 .comment {
 	position: absolute;
 	right: -32px;
-	top: calc(50% - 16px);
+	top: calc(50% - 8px);
 	display: none;
 }
 
 .comment i {
 	opacity: 0.64;
+	outline: none;
 }
 
 .comment i:hover {
@@ -282,6 +288,7 @@ section.section-active .optional {
 
 .format-bar i.md-inactive, .format-bar i:hover.md-inactive {
 	opacity: 0.16;
+	cursor: not-allowed;
 }
 
 .add-answer {
@@ -295,6 +302,29 @@ section.section-active .optional {
 .add-answer i {
 	position: relative;
 	top: 8px;
+}
+
+.comment-create {
+	width: calc(260px - 32px);
+	padding: 16px;
+	background: #FFFFFF;
+	border-radius: 2px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16);
+	border: 1px solid rgba(0,0,0,0.08);
+	position: absolute;
+	top: -2px;
+    right: -272px;
+    display: none;
+}
+
+.comment-create.show {
+	display: block;
+}
+
+textarea {
+	height: 120px;
+	width: 100%;
+	border: 1px solid #CCCCCC;
 }
 
 
@@ -361,7 +391,7 @@ section.section-active .optional {
 					  	</ul>
 				  	</div>
 				  	<div class="add-section">
-				  		+ Create new section 
+				  		<i class="material-icons" style="color: #056C99;">add_circle</i> Create new section 
 				  	</div>
 
 				  </div>
@@ -401,7 +431,11 @@ section.section-active .optional {
 				  			<div class="comment">
 				  				<i id="tt-comment1" class="material-icons">insert_comment</i>
 				  				<div class="mdl-tooltip" data-mdl-for="tt-comment1">Comment</div>
+				  			</div>
 
+				  			<div class="comment-create">
+				  					<textarea></textarea>
+				  					<button>Send</button>
 				  			</div>
 				  		</section>
 
@@ -448,14 +482,16 @@ section.section-active .optional {
 				  			<p contenteditable="true" id="guidance-content" class="optional" placeholder="Guidance text (optional)..."></p>
 				  		</div>
 				  			<div class="comment">
-				  				<i class="material-icons">insert_comment</i>
+				  				<i id="tt-comment2" class="material-icons">insert_comment</i>
+				  				<div class="mdl-tooltip" data-mdl-for="tt-comment2">Comment</div>
 				  			</div>
 				  		</section>
 
 				  		<section class="section answer">
 				  			<span class="add-answer"><i class="material-icons">add_circle_outline</i> add answer</span>
 				  			<div class="comment">
-				  				<i class="material-icons">insert_comment</i>
+				  				<i id="tt-comment3" class="material-icons">insert_comment</i>
+				  				<div class="mdl-tooltip" data-mdl-for="tt-comment3">Comment</div>
 				  			</div>
 				  		</section>
 
@@ -499,11 +535,11 @@ section.section-active .optional {
 	
 $(document).ready(function() {
 
-	$('.mdl-cell--1-col').on('click', function(e){
+	$('.mdl-cell--1-col, .mdl-cell--2-col').on('click', function(e){
 		
 		//if ($(this).not("section")) {
 			$('section').removeClass('section-active');
-			$('.format-bar').removeClass('show');
+			$('.format-bar, .comment-create').removeClass('show');
 		//}
 
 		/*if ($(this).is("section")) {
@@ -518,7 +554,6 @@ $(document).ready(function() {
   $('section').on('click', function(){
   	$('section').removeClass('section-active');
   	$(this).addClass('section-active');
-  	e.stopPropagation();
   });
 
   $(document).keydown(function () {
@@ -568,6 +603,12 @@ function explode(){
   $('.add-answer').on('click', function(){
   	alert('add an answer to this parent');
   });
+
+  $('.comment').on('click', function(){
+  	//$(this).parent().children('.comment-create').addClass('show');
+  	alert('add create comment');
+  });
+
 })
 </script>
 
