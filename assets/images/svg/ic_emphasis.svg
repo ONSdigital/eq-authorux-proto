@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
     <title>Slice 1</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ic_border_color_black_24px">
-            <polygon id="Shape" points="0 0 20 0 20 20 0 20"></polygon>
-            <polygon id="Shape" fill="#000000" fill-rule="nonzero" points="1.66666667 16.6666667 21.6666667 16.6666667 21.6666667 20 1.66666667 20"></polygon>
-            <g id="Group-2" transform="translate(11.132149, 8.985702) rotate(-315.000000) translate(-11.132149, -8.985702) translate(8.132149, -0.014298)" fill="#000000">
-                <path d="M2,0.177847205 L3.77060932,0.177847205 L3.77060932,0.177847205 C4.87517882,0.177847205 5.77060932,1.07327771 5.77060932,2.17784721 L5.77060932,12.440392 L0,12.440392 L0,2.17784721 L0,2.17784721 C-1.3527075e-16,1.07327771 0.8954305,0.177847205 2,0.177847205 L2,0.177847205 Z M0,13.8933692 L5.77060932,13.8933692 L4.32795699,16.0573477 L4.32795699,16.7786738 L1.44265233,17.5 L1.44265233,16.0573477 L0,13.8933692 Z" id="Combined-Shape"></path>
+        <g id="Group-2">
+            <polygon id="Shape" points="0.5 0 24.5 0 24.5 24 0.5 24"></polygon>
+            <g id="Group" transform="translate(2.000000, 2.000000)" fill-rule="nonzero" fill="#000000">
+                <polygon id="Shape" points="0.66666667 16.6666667 20.6666667 16.6666667 20.6666667 20 0.66666667 20"></polygon>
+                <g id="Group-2" transform="translate(10.132149, 8.985702) rotate(45.000000) translate(-10.132149, -8.985702) translate(7.132149, -0.014298)">
+                    <path d="M2,0.177847205 L3.77060932,0.177847205 L3.77060932,0.177847205 C4.87517882,0.177847205 5.77060932,1.07327771 5.77060932,2.17784721 L5.77060932,12.440392 L0,12.440392 L0,2.17784721 L0,2.17784721 C-1.3527075e-16,1.07327771 0.8954305,0.177847205 2,0.177847205 L2,0.177847205 Z M0,13.8933692 L5.77060932,13.8933692 L4.32795699,16.0573477 L4.32795699,16.7786738 L1.44265233,17.5 L1.44265233,16.0573477 L0,13.8933692 Z" id="Combined-Shape"></path>
+                </g>
             </g>
         </g>
     </g>
