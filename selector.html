@@ -230,8 +230,15 @@ display: -webkit-flex;
 
   $(document).ready(function() {
     $('.close').on('click', function(){
-          $('.mdl-menu__container').removeClass('.is-visible');
+          $('.mdl-menu__container').removeClass('is-visible');
     });
+
+    $(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $('.mdl-menu__container').removeClass('is-visible');
+    }
+});
+    
   });
 
   </script>
