@@ -1,0 +1,240 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="assets/css/material.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+<style type="text/css">
+
+body {
+  background: #f5f5f5 !important;
+}
+.menuBardemoBasicUsage .page-container {
+  padding: 32px; }
+
+.menuBardemoBasicUsage .page {
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 680px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25); }
+
+.menuBardemoBasicUsage .page h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 0;
+  font-weight: normal; }
+
+.menuBardemoBasicUsage .page p {
+  line-height: 1.6rem; }
+
+.section_name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 260px;
+}
+
+md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent>.md-button {
+    padding: 0px 32px 0 16px;
+}
+
+md-menu-content {
+  min-width: inherit !important;
+}
+
+h4 {
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 24px;
+    margin: 0;
+    padding-left: 16px;
+}
+
+.mdl-button {
+  text-transform: inherit;
+  padding: 0;
+}
+
+.mdl-button:hover {
+  background: transparent;
+}
+
+.mdl-menu__container.is-visible {
+  bottom: 0 !important;
+}
+
+.add-container {
+  position: relative;
+  margin-left: 24px;
+}
+
+.answer-type-list li {
+  list-style: none;
+  width: 92px !important;
+  height: 42px;
+  display: block;
+  background: #f5f5f5;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.answer-type-list li.middle {
+  margin: 0 16px 16px;
+}
+
+.answer-type-list li.last-row {
+  margin-bottom: 0 !important;
+}
+
+ul.answer-type-list {
+ margin-top: 8px;
+  width: 312px;
+  padding: 0 16px;
+display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+}
+
+.mdl-menu {
+  position: relative;
+}
+
+.mdl-menu .close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 16px !important;
+}
+</style>
+<body ng-app="menuBarDemoBasic">
+
+
+      <div class="mdl-tabs__panel is-active" id="builder-panel">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col">
+            
+
+          </div>
+          <div class="mdl-cell mdl-cell--1-col"></div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-card mdl-shadow--2dp" style="height: 500px; width: 100%; margin-top: 24px;">
+              <section class="section section-active">
+
+                <div class="editable-area">
+
+
+                  <h2 contenteditable="true" id="section-title" placeholder="Section title"></h2>
+                </div>
+
+                <div class="editable-area">
+
+                <p contenteditable="true" id="section-description" class="optional" placeholder="Section description (optional)..."></p>
+                </div>
+
+
+              </section>
+
+              <section class="section question">
+                <div class="editable-area">
+                  <h1 contenteditable="true" id="question-title" placeholder="Question title"></h1>
+                </div>
+
+                <div class="editable-area">
+                  <p contenteditable="true" id="question-description" class="optional" placeholder="Question description (optional)..."></p>
+                </div>
+
+              <div class="editable-area">
+                <p contenteditable="true" id="guidance-content" class="optional" placeholder="Guidance text (optional)..."></p>
+              </div>
+
+              </section>
+
+              <section class="section answer">
+                <!-- Left aligned menu on top of button  -->
+              <div class="add-container">  
+                <button id="demo-menu-top-left" class="mdl-button mdl-js-button">
+                  <i class="material-icons">add_circle_outline</i> add answer
+                </button>
+
+                <div class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" data-mdl-for="demo-menu-top-left"  style="width: 344px;">
+                  <h4>Answer type</h4>
+                  <i class="material-icons close">close</i>
+                  <ul class="answer-type-list">
+                    <li></li>
+                    <li class="middle"></li>
+                    <li></li>
+                    <li></li>
+                    <li class="middle"></li>
+                    <li></li>
+                    <li></li>
+                    <li class="middle"></li>
+                    <li></li>
+                    <li class="last-row"></li>
+                    <li class="middle last-row"></li>
+                  </ul>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="mdl-cell mdl-cell--1-col"></div>
+          <div class="mdl-cell mdl-cell--2-col" style="margin-top: 0;">
+            <div class="right-panel"></div>
+            
+          </div>
+         </div>
+      </div>
+
+
+
+
+
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  
+  <!-- Your application bootstrap  -->
+  <script type="text/javascript">    
+    /**
+     * You must include the dependency on 'ngMaterial' 
+     */
+  angular.module('menuBarDemoBasic', ['ngMaterial'])
+  .controller('DemoBasicCtrl', function DemoCtrl($mdDialog) {
+  });
+
+  $(document).ready(function() {
+    $('.close').on('click', function(){
+          $('.mdl-menu__container').removeClass('.is-visible');
+    });
+  });
+
+  </script>
+  
+</body>
+</html>

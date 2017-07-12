@@ -327,6 +327,11 @@ textarea {
 	border: 1px solid #CCCCCC;
 }
 
+p i, h1 i {
+	font-style: inherit;
+	background: #ccc;
+}
+
 
 </style>
 <body>
@@ -401,6 +406,7 @@ textarea {
 				  		<section class="section section-active">
 
 				  			<div class="editable-area">
+
 				  				<div class="format-bar show">
 				  					<i id="tt-heading" class="material-icons md-inactive"><img src="assets/images/svg/ic_heading.svg"></i>
 				  					<div class="mdl-tooltip" data-mdl-for="tt-heading">Heading</div>
@@ -418,9 +424,9 @@ textarea {
 				  				<div class="format-bar">
 				  					<i id="tt-heading" class="material-icons md-inactive"><img src="assets/images/svg/ic_heading.svg"></i>
 				  					<div class="mdl-tooltip" data-mdl-for="tt-heading">Heading</div>
-				  					<i id="tt-bold" class="material-icons">format_bold</i>
+				  					<i id="tt-bold" class="material-icons" onclick="document.execCommand('bold',false,null);">format_bold</i>
 				  					<div class="mdl-tooltip" data-mdl-for="tt-bold">Bold</div>
-				  					<i id="tt-emphasis" class="material-icons"><img src="assets/images/svg/ic_emphasis.svg"></i>
+				  					<i id="tt-emphasis" class="material-icons" onclick="document.execCommand('italic',false,null);"><img src="assets/images/svg/ic_emphasis.svg"></i>
 				  					<div class="mdl-tooltip" data-mdl-for="tt-emphasis">Emphasis</div>
 				  					<i id="tt-list" class="material-icons md-inactive">list</i>
 				  					<div class="mdl-tooltip" data-mdl-for="tt-list">List</div>
@@ -446,7 +452,7 @@ textarea {
 				  					<div class="mdl-tooltip" data-mdl-for="tt-heading">Heading</div>
 				  					<i id="tt-bold" class="material-icons md-inactive">format_bold</i>
 				  					<div class="mdl-tooltip" data-mdl-for="tt-bold">Bold</div>
-				  					<i id="tt-emphasis" class="material-icons"><img src="assets/images/svg/ic_emphasis.svg"></i>
+				  					<i id="tt-emphasis" class="material-icons" onclick="document.execCommand('italic',false,null);"><img src="assets/images/svg/ic_emphasis.svg"></i>
 				  					<div class="mdl-tooltip" data-mdl-for="tt-emphasis">Emphasis</div>
 				  					<i id="tt-list" class="material-icons md-inactive">list</i>
 				  					<div class="mdl-tooltip" data-mdl-for="tt-list">List</div>
@@ -615,7 +621,6 @@ function explode(){
        e.preventDefault();
     }
   });*/
-
 
 })
 </script>
