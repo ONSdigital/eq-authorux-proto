@@ -474,6 +474,21 @@ p i, h1 i {
 	opacity: .87;
 }
 
+.expander {
+	position: absolute;
+	bottom: -26px;
+	background: #000000;
+	color: #fff;
+	font-size: 10px;
+	padding: 0 8px;
+	line-height: 24px;
+	display: none;
+}
+
+.chip:hover .expander {
+	display: block;
+}
+
 .cancel {
 	position: relative;
 	top: 8px;
@@ -700,11 +715,19 @@ function explode(){
                 favorite.push($(this).val());
             });
 
-  	 		$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
+            if(favorite.length > 2) {
+
+            	$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.length + ' selected... <i class="material-icons cancel">cancel</i> <div class="expander">' + favorite.join(" OR ") + '</div></div></div>');
+
+            } else {
+
+  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
+  	 		}
 
   	 		$('.cancel').on('click', function(){
   	 			$(this).parent().parent().remove();
   	 		});
+
   	 	});
 
   	 });
@@ -736,7 +759,14 @@ function explode(){
                 favorite.push($(this).val());
             });
 
-  	 		$(this).parent().parent().replaceWith('<div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div>');
+  	 		if(favorite.length > 2) {
+
+            	$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.length + ' selected... <i class="material-icons cancel">cancel</i> <div class="expander">' + favorite.join(" OR ") + '</div></div></div>');
+
+            } else {
+
+  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
+  	 		}
 
   	 		$('.cancel').on('click', function(){
   	 			$(this).parent().remove();
