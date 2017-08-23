@@ -348,6 +348,7 @@ p i, h1 i {
 	font-size: 13px;
 	display: flex;
 	position: relative;
+	font-size: 13px;
 }
 
 .flex-col {
@@ -412,7 +413,7 @@ p i, h1 i {
 
 .if-selector {
 	position: absolute;
-	top: 19px;
+	top: 48px;
 	width: 100%;
 	background: #FFF;
 	border: 1px solid rgba(0,0,0,0.16);
@@ -424,6 +425,7 @@ p i, h1 i {
 .answer-options li {
 	list-style: none;
 	line-height: 40px;
+	font-size: 13px;
 }
 
 .if-selector li {
@@ -677,7 +679,7 @@ function explode(){
   $('.add-rule').on('click', function(){
   	$(this).parent().parent().before('<li class="row">'
   		+'<div class="flex-col"><span class="if">IF</span>'
-  		+'<div class="value">'
+  		+'<div class="value"><span class="cursor">|</span>'
   		+'<div class="if-selector">'
   		+'<ul>'
   		+'<li class="chip-selector">Question 1</li>'
@@ -701,7 +703,7 @@ function explode(){
   	 	$(this).addClass('hide');
 
 
-  	 	$(this).before('<span class="operand-temp">AND</span><div class="value">'
+  	 	$(this).before('<span class="operand-temp">AND</span><div class="value"><span class="cursor">|</span>'
   		+'<div class="if-selector">'
   		+'<ul>'
   		+'<li class="chip-selector">Question 1</li>'
@@ -715,6 +717,8 @@ function explode(){
   	 });
 
   	 $('.chip-selector').on('click', function(){
+  	 	$('.cursor').remove();
+  	 	
   	 	answervalues = '<div class="answer">'+ $(this).text()+'</div>'
   	 	answervalues += '<div class="answer-options">'
   	 	answervalues += '<ul>'
@@ -749,6 +753,10 @@ function explode(){
   	 			$(this).parent().parent().remove();
   	 		});
 
+  	 		  	 		$('.chip').on('click', function(){
+  	 			alert('chip');
+  	 		});
+
   	 	});
 
   	 });
@@ -761,6 +769,8 @@ function explode(){
 
 
   	 $('.chip-selector').on('click', function(){
+
+  	 	$('.cursor').remove();
   	 	answervalues = '<div class="answer">'+ $(this).text()+'</div>'
   	 	answervalues += '<div class="answer-options">'
   	 	answervalues += '<ul>'
@@ -792,6 +802,11 @@ function explode(){
   	 		$('.cancel').on('click', function(){
   	 			$(this).parent().remove();
   	 		});
+
+  	 		$('.chip').on('click', function(){
+  	 			alert('chip');
+  	 		});
+
   	 	});
 
   	 });
