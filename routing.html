@@ -371,6 +371,7 @@ p i, h1 i {
 
 .mdl-card {
 	min-height: inherit;
+	position: inherit;
 }
 
 .add-rule, .and {
@@ -386,7 +387,8 @@ p i, h1 i {
 	display: none;
 } 
 
-.operand{
+.operand,
+.operand-temp {
 	color: #040404;
 	opacity: .54;
 	text-transform: uppercase;
@@ -421,12 +423,26 @@ p i, h1 i {
 .if-selector li,
 .answer-options li {
 	list-style: none;
+	line-height: 40px;
+}
+
+.if-selector li {
+	padding: 0 16px;
+}
+
+.if-selector li:hover {
+	background: #f5f5f5;
+	cursor: pointer;
 }
 
 .if-selector ul,
 .answer-options ul {
-	margin: 8px;
+	margin: 0;
 	padding: 0; 
+}
+
+.if-selector ul {
+	margin: 8px 0;
 }
 
 .answer {
@@ -440,7 +456,8 @@ p i, h1 i {
 .answer-options {
 	position: absolute;
 	top: 48px;
-	width: 100%;
+	width: calc(100% - 34px);
+	padding: 8px 16px;
 	background: #FFF;
 	border: 1px solid rgba(0,0,0,0.16);
 	z-index: 10;
@@ -455,6 +472,7 @@ p i, h1 i {
 	text-transform: uppercase;
 	color: #0087D4;
 	text-align: right;
+	line-height: 40px;
 }
 
 .chip-container {
@@ -680,10 +698,10 @@ function explode(){
 //start and
 
   	 $('.and').on('click', function(){
-  	 	$(this).addClass('black');
+  	 	$(this).addClass('hide');
 
 
-  	 	$(this).before('<div class="value">'
+  	 	$(this).before('<span class="operand-temp">AND</span><div class="value">'
   		+'<div class="if-selector">'
   		+'<ul>'
   		+'<li class="chip-selector">Question 1</li>'
@@ -714,6 +732,9 @@ function explode(){
             $.each($("input[name='answer']:checked"), function(){            
                 favorite.push($(this).val());
             });
+
+            $('.operand-temp').remove();
+            $('.and').removeClass('hide');
 
             if(favorite.length > 2) {
 
@@ -761,11 +782,11 @@ function explode(){
 
   	 		if(favorite.length > 2) {
 
-            	$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.length + ' selected... <i class="material-icons cancel">cancel</i> <div class="expander">' + favorite.join(" OR ") + '</div></div></div>');
+            	$(this).parent().parent().replaceWith('<div class="chip-container"><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.length + ' selected... <i class="material-icons cancel">cancel</i> <div class="expander">' + favorite.join(" OR ") + '</div></div></div>');
 
             } else {
 
-  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
+  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
   	 		}
 
   	 		$('.cancel').on('click', function(){
