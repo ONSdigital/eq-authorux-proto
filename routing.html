@@ -334,11 +334,18 @@ p i, h1 i {
 
 .mdl-card h2 {
 	font-size: 20px;
-	line-height: 48px;
+	line-height: 24px;
 	margin: 0;
 	width: calc(100% -48px);
 	border-bottom: 1px solid rgba(0,0,0,0.12);
-	padding: 0 24px;
+	padding: 16px 24px;
+}
+
+.mdl-card h2 span {
+	width: 112px;
+    display: block;
+    height: 48px;
+    float: left;
 }
 
 .row {
@@ -353,12 +360,12 @@ p i, h1 i {
 
 .flex-col {
 	display: inline-block;
-	width: 79%;
+	width: 78%;
 }
 
 .flex-col.right {
 	text-align: right;
-	width: 21%;
+	width: 22%;
 }
 
 .rules {
@@ -555,17 +562,62 @@ p i, h1 i {
 
 			<div class="mdl-tabs__panel is-active" id="routing-panel">
 				<div class="mdl-grid">
-				  <div class="mdl-cell mdl-cell--3-col"></div>
-				  <div class="mdl-cell mdl-cell--6-col">
+				  <div class="mdl-cell mdl-cell--2-col"></div>
+			
+				  <div class="mdl-cell mdl-cell--8-col">
+
+				  <!--<h1>Section Employment Status</h1>-->
+
 				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
-				  		<h2>Question 1 - What toppings would you like?</h2>
+				  		<h2>3.10 Please estimate the amount of expenditure for acquisition of existing knowledge for the calendar year 2016 only?</h2>
 				  		<ul class="rules">
 					  		<li class="row"><span class="add-rule">+ add rule</span></li>
 					  		<li class="row last">
 					  			<div class="flex-col">Default</div>
 					  			<div class="flex-col right">Go to 
 					  				<select>
-					  					<option>Question 2</option>
+					  					<option>Question 3.11</option>
+					  					<option>Question 3.12</option>
+					  					<option>Question 3.13</option>
+					  					<option>Question 3.14</option>
+					  					<option>Question 3.15</option>
+					  					<option>Question 3.16</option>
+					  					<option>Question 3.17</option>
+					  					<option>Section summary</option>
+					  					<option>Section 4</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>
+
+					<!--<h1>Section Employed</h1>
+
+				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>2. Did you have more than one paid job or a separate business?</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
+					  					<option>Question 3</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>
+
+					<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>3. Are you....</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
 					  					<option>Question 3</option>
 					  				</select>
 					  			</div>
@@ -575,7 +627,7 @@ p i, h1 i {
 				  	</div>
 
 				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
-				  		<h2>Question 2 - What cookies would you like?</h2>
+				  		<h2>4. ..and is that job....</h2>
 				  		<ul class="rules">
 					  		<li class="row"><span class="add-rule">+ add rule</span></li>
 					  		<li class="row last">
@@ -589,9 +641,152 @@ p i, h1 i {
 				  		</ul>
 
 				  	</div>
+
+					<h1>Section Unemployed</h1>-->
+				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>3.11 Did {{respondent.ru_name}} invest in training for innovative activities for the purposes of current or future innovation?</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
+					  					<option>Question 3.12</option>
+					  					<option>Question 3.13</option>
+					  					<option>Question 3.14</option>
+					  					<option>Question 3.15</option>
+					  					<option>Question 3.16</option>
+					  					<option>Question 3.17</option>
+					  					<option>Section summary</option>
+					  					<option>Section 4</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>
+
+
+				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>3.12 Please estimate the amount of expenditure for training for innovative activities for the calendar year 2016 only?</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
+					  					<option>Question 3.13</option>
+					  					<option>Question 3.14</option>
+					  					<option>Question 3.15</option>
+					  					<option>Question 3.16</option>
+					  					<option>Question 3.17</option>
+					  					<option>Section summary</option>
+					  					<option>Section 4</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>
+
+
+				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>3.13  Did {{respondent.ru_name}} invest in all forms of design for the purposes of current or future innovation?</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
+					  					<option>Question 3.14</option>
+					  					<option>Question 3.15</option>
+					  					<option>Question 3.16</option>
+					  					<option>Question 3.17</option>
+					  					<option>Section summary</option>
+					  					<option>Section 4</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>
+
+				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>3.14 Please estimate the amount of expenditure for all forms of design for the calendar year 2016 only?</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
+					  					<option>Question 3.15</option>
+					  					<option>Question 3.16</option>
+					  					<option>Question 3.17</option>
+					  					<option>Section summary</option>
+										<option>Section 4</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>
+
+				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>3.15 Did {{respondent.ru_name}} invest in market introduction of innovations for the purposes of current or future innovation?</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
+					  					<option>Question 3.16</option>
+					  					<option>Question 3.17</option>
+					  					<option>Section summary</option>
+					  					<option>Section 4</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>
+
+				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>3.16 Which of the following did {{respondent.ru_name}}  invest in for the purposes of current or future innovation?</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
+					  					<option>Question 3.17</option>
+					  					<option>Section summary</option>
+										<option>Section 4</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>
+
+				  	<div class="mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 24px;">
+				  		<h2>3.17 Please estimate the amount of expenditure for market introduction of innovations for the calendar year 2016 only?</h2>
+				  		<ul class="rules">
+					  		<li class="row"><span class="add-rule">+ add rule</span></li>
+					  		<li class="row last">
+					  			<div class="flex-col">Default</div>
+					  			<div class="flex-col right">Go to 
+					  				<select>
+					  					<option>Section summary</option>
+										<option>Section 4</option>
+					  				</select>
+					  			</div>
+					  		</li>
+				  		</ul>
+
+				  	</div>				  	
 
 				  </div>
-				  <div class="mdl-cell mdl-cell--3-col"></div>
+				  <div class="mdl-cell mdl-cell--2-col"></div>
 				 </div>				
 			</div>
 
@@ -682,9 +877,14 @@ function explode(){
   		+'<div class="value"><span class="cursor">|</span>'
   		+'<div class="if-selector">'
   		+'<ul>'
-  		+'<li class="chip-selector">Question 1</li>'
-  		+'<li class="chip-selector">Question 2</li>'
-  		+'<li class="chip-selector">Question 3</li>'
+  		+'<li class="chip-selector">Question 3.10</li>'
+  		+'<li class="chip-selector">Question 3.11</li>'
+  		+'<li class="chip-selector">Question 3.12</li>'
+  		+'<li class="chip-selector">Question 3.13</li>'
+  		+'<li class="chip-selector">Question 3.14</li>'
+  		+'<li class="chip-selector">Question 3.15</li>'
+  		+'<li class="chip-selector">Question 3.16</li>'
+  		+'<li class="chip-selector">Question 3.17</li>'
   		+'</ul>'
   		+'</div>'
   		+'</div>'
@@ -692,7 +892,7 @@ function explode(){
   		+'</div>'
   		+'<div class="flex-col right">Go to '
   		+'<select>'
-  		+'<option>Question 1</option><option>Question 2</option><option>Question 3</option></select><i class="material-icons close">close</i></div>');
+  		+'<option>Question 3.11</option><option>Question 3.12</option><option>Question 3.13</option><option>Question 3.14</option><option>Question 3.15</option><option>Question 3.16</option><option>Question 3.17</option><option>Section summary</option><option>Section 4</option></select><i class="material-icons close">close</i></div>');
   	 $('.close').on('click', function(){
   	 	$(this).parent().parent().remove();
   	 });
@@ -706,9 +906,14 @@ function explode(){
   	 	$(this).before('<span class="operand-temp">AND</span><div class="value"><span class="cursor">|</span>'
   		+'<div class="if-selector">'
   		+'<ul>'
-  		+'<li class="chip-selector">Question 1</li>'
-  		+'<li class="chip-selector">Question 2</li>'
-  		+'<li class="chip-selector">Question 3</li>'
+  		+'<li class="chip-selector">Question 3.10</li>'
+  		+'<li class="chip-selector">Question 3.11</li>'
+  		+'<li class="chip-selector">Question 3.12</li>'
+  		+'<li class="chip-selector">Question 3.13</li>'
+  		+'<li class="chip-selector">Question 3.14</li>'
+  		+'<li class="chip-selector">Question 3.15</li>'
+  		+'<li class="chip-selector">Question 3.16</li>'
+  		+'<li class="chip-selector">Question 3.17</li>'
   		+'</ul>'
   		+'</div>');
 
@@ -718,13 +923,12 @@ function explode(){
 
   	 $('.chip-selector').on('click', function(){
   	 	$('.cursor').remove();
-  	 	
+
   	 	answervalues = '<div class="answer">'+ $(this).text()+'</div>'
   	 	answervalues += '<div class="answer-options">'
   	 	answervalues += '<ul>'
   	 	answervalues += '<li><input type="checkbox" name="answer" value="Yes"> Yes</li>'
   	 	answervalues += '<li><input type="checkbox" name="answer" value="No"> No</li>'
-  	 	answervalues += '<li><input type="checkbox" name="answer" value="Unanswered"> Unanswered</li>'
   	 	answervalues += '</ul>'
   	 	answervalues += '<div class="submit-button">Done</div>'
   	 	answervalues += '</div>'
@@ -746,15 +950,53 @@ function explode(){
 
             } else {
 
-  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
+  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip"><span class="question">' + $(this).parent().parent().children('.answer').text() + '</span> = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
   	 		}
 
   	 		$('.cancel').on('click', function(){
   	 			$(this).parent().parent().remove();
   	 		});
 
-  	 		  	 		$('.chip').on('click', function(){
-  	 			alert('chip');
+  	 		$('.chip').on('click', function(){
+
+  	 	answervalues = '<div class="value"><div class="answer">'+ $(this).children('.question').text() +'</div>'
+  	 	answervalues += '<div class="answer-options">'
+  	 	answervalues += '<ul>'
+  	 	answervalues += '<li><input type="checkbox" name="answer" value="Yes"> Yes</li>'
+  	 	answervalues += '<li><input type="checkbox" name="answer" value="No"> No</li>'
+  	 	answervalues += '</ul>'
+  	 	answervalues += '<div class="submit-button">Done</div>'
+  	 	answervalues += '</div></div>'
+
+  	 			$(this).parent().replaceWith(answervalues);
+
+
+
+  	 			$('.submit-button').on('click', function(){
+
+  	 		var favorite = [];
+            $.each($("input[name='answer']:checked"), function(){            
+                favorite.push($(this).val());
+            });
+
+            $('.operand-temp').remove();
+            $('.and').removeClass('hide');
+
+            if(favorite.length > 2) {
+
+            	$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.length + ' selected... <i class="material-icons cancel">cancel</i> <div class="expander">' + favorite.join(" OR ") + '</div></div></div>');
+
+            } else {
+
+  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><span class="operand">AND</span><div class="chip"><span class="question">' + $(this).parent().parent().children('.answer').text() + '</span> = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
+  	 		}
+
+  	 		$('.cancel').on('click', function(){
+  	 			$(this).parent().parent().remove();
+  	 		});
+
+  	 	});
+
   	 		});
 
   	 	});
@@ -776,7 +1018,6 @@ function explode(){
   	 	answervalues += '<ul>'
   	 	answervalues += '<li><input type="checkbox" name="answer" value="Yes"> Yes</li>'
   	 	answervalues += '<li><input type="checkbox" name="answer" value="No"> No</li>'
-  	 	answervalues += '<li><input type="checkbox" name="answer" value="Unanswered"> Unanswered</li>'
   	 	answervalues += '</ul>'
   	 	answervalues += '<div class="submit-button">Done</div>'
   	 	answervalues += '</div>'
@@ -796,7 +1037,7 @@ function explode(){
 
             } else {
 
-  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><div class="chip">' + $(this).parent().parent().children('.answer').text() + ' = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
+  	 			$(this).parent().parent().replaceWith('<div class="chip-container"><div class="chip"><span class="question">' + $(this).parent().parent().children('.answer').text() + '</span> = ' + favorite.join(" OR ") + '<i class="material-icons cancel">cancel</i></div></div>');
   	 		}
 
   	 		$('.cancel').on('click', function(){
@@ -804,7 +1045,16 @@ function explode(){
   	 		});
 
   	 		$('.chip').on('click', function(){
-  	 			alert('chip');
+  	 	answervalues = '<div class="value"><div class="answer">'+ $(this).children('.question').text() +'</div>'
+  	 	answervalues += '<div class="answer-options">'
+  	 	answervalues += '<ul>'
+  	 	answervalues += '<li><input type="checkbox" name="answer" value="Yes"> Yes</li>'
+  	 	answervalues += '<li><input type="checkbox" name="answer" value="No"> No</li>'
+  	 	answervalues += '</ul>'
+  	 	answervalues += '<div class="submit-button">Done</div>'
+  	 	answervalues += '</div></div>'
+
+  	 			$(this).parent().replaceWith(answervalues);
   	 		});
 
   	 	});
